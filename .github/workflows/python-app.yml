@@ -1,0 +1,65 @@
+
+#{Filename: <airplane control=""> }
+#{Program : At 20 distance of the landing it tells the pilot if help/she
+#has enough fuel or not and outputs the coordinates.}
+#{Outline program. checks if you plane is at 20 distance if it isnt it
+#decreases by one and keeps looping until its 20}
+#{Programmer : <james cui=""> }
+#{Class : Class/Section (Mr.Sze) }
+#{Due Date : <january,28,> }
+
+import random
+import math
+import time
+
+iend=1
+icounter=0
+iconsump=50 #per hour
+idestination= (0,0,0)
+ix= input ("please enter your x coord")
+iy= input ("please enter your y coord")
+iz= input ("please enter your z coord")
+ispeed= input ("please enter the speed of your plane")
+ifuel= input ("please enter your fuel")
+idistance= math.sqrt((ix)^2+(iy)^2+(iz)^2)
+itime= idistance/ispeed
+iremain= itime*iconsump
+iwind= random.randrange (1,50)
+
+while iend > 0:
+ixdeducted = random.randint(1,2)
+if ix > 0:
+if ix == 1:
+ix = ix - 1
+else:
+ix = ix - ixdeducted
+else:
+ix = ix + 0
+print "You are now at",ix,"on the X coordinate."
+iydeducted = random.randint(1,2)
+if iy > 0:
+if iy == 1:
+iy = iy - 1
+else:
+iy = iy - iydeducted
+else:
+iy = iy + 0
+print "You are now at",iy,"on the Y coordinate."
+izdeducted = random.randint(1,2)
+if iz > 0:
+if iz ==1:
+iz = iz -1
+else:
+iz = iz - izdeducted
+else:
+iz = iz + 0
+print "You are now at",iz,"on the Z coordinate."
+print "You were flying for a total of",itime,"hours"
+
+
+if idistance<=15:
+if ifuel<iremain: xmlns:iremain="#unknown">
+print "you do not have enough fuel,please make an emergency landing"
+iend==0
+else:
+print "you have enough fuel to land, please proceed"
