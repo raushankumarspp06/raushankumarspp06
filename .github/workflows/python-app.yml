@@ -1,12 +1,4 @@
 
-#{Filename: <airplane control=""> }
-#{Program : At 20 distance of the landing it tells the pilot if help/she
-#has enough fuel or not and outputs the coordinates.}
-#{Outline program. checks if you plane is at 20 distance if it isnt it
-#decreases by one and keeps looping until its 20}
-#{Programmer : <james cui=""> }
-#{Class : Class/Section (Mr.Sze) }
-#{Due Date : <january,28,> }
 
 import random
 import math
